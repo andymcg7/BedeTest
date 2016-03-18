@@ -21,7 +21,7 @@ Additions & modifications I would like to make include greater use of CSS proces
 
 ## Build & development
 
-Install npm on your pc.
+Install npm and bower on your pc.
 Download and extract all of the files. Open a command prompt at the directory containing the app & run
 `bower install`
 `npm install`
