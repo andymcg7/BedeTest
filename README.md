@@ -1,7 +1,7 @@
 # bedefrontendtest
 
 This is my implementation of the Bede Frontend Developer test, 2016.
-To run, extract all of the files and open dist/index.html
+To run, extract all of the files and open dist/index.html in a browser such as Firefox that supports opening of local files.
 
 I chose to use Angular for this project, as I felt from my previous knowledge (although a little rusty) of the framework it was 
 well suited to the task. Using Angular should also help with testing of the code.
