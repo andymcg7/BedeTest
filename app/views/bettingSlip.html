@@ -1,0 +1,61 @@
+<div class="row marketing">
+  <h2 class="centered">BETTING SLIP</h2>
+  <br/>
+  <div cg-busy="loadingPromise"></div>
+  <div>
+    <div class="alert alert-info" ng-show="bets.length == 0 && !allBetsAddedSuccessfully">
+      No bets on your betslip yet.
+    </div>
+    <div class="alert alert-success" ng-show="allBetsAddedSuccessfully">
+      <strong>Success!</strong> All bets successfully placed.
+    </div>
+    <form name="bettingSlipForm">
+      <table class="table table-striped table-condensed table-hover" ng-show="bets.length">
+        <thead>
+          <tr class="normalText headingText">
+            <th>Event</th>
+            <th>Name</th>
+            <th>Odds</th>
+            <th>Stake</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in bets" ng-form="individualBetForm" class="normalText">
+            <td>
+              {{item.event}}
+            </td>
+            <td>
+              {{item.name}}
+            </td>
+            <td>
+              {{displayOdds(item)}}
+            </td>
+            <td>
+              <div class="input-group" ng-class="{ 'has-error' : individualBetForm.stake.$dirty&& individualBetForm.stake.$invalid }" style="width: 8em;">
+                <span class="input-group-addon">{{currencySymbol}}</span>
+                <input class="form-control" style="width: 6em;" type="text" name="stake" ng-model="item.stake" min="0.05" max="10000" money required>
+              </div>
+              <p style="width: 18em;" class="help-block" ng-class="{'vis-hidden': !individualBetForm.stake.$dirty || !individualBetForm.stake.$invalid}">Valid stake is between {{currencySymbol}}0.05 &amp; {{currencySymbol}}10000</p>
+            </td>
+            <td>
+              <button class="btn btn-danger" ng-click="removeBet(item)" aria-label="Remove">X</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="right-align" ng-show="bets.length">
+        <button ng-click="placeBets();" class="btn-primary" ng-disabled="bettingSlipForm.$invalid">Place Bets</button>
+      </div>
+    </form>
+    <div class="input-group has-error">
+      <div class="alert alert-warning" ng-show="partialSuccess">
+        <strong>Warning!</strong> Some of your bets were successfully placed, but some were not. The unsuccessful bets remain in your betting slip.
+      </div>
+      <div class="alert alert-danger" ng-show="completeFailure">
+        <strong>Error!</strong> Unable to place any bets. Please check your connection and try again.
+      </div>
+    </div>
+
+  </div>
+</div>

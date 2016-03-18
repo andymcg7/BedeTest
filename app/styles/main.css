@@ -1,0 +1,218 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: bold;
+  src: url("fonts/Montserrat-Bold.otf") format("opentype");
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #FFF;
+}
+
+.selected {
+  background-color: #f9f9f9;
+}
+
+li.active {
+  background-color: #fff;
+  border-bottom: 3px solid #db1018;
+}
+
+li:hover {
+  background-color: #fff;
+  border-bottom: 3px solid #db1018;
+}
+
+.centered {
+  text-align: center;
+}
+
+.navbarContainer {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border: 0px;
+}
+
+.btn-primary {
+  font-size: 20px;
+}
+
+.bedenavbar {
+  padding-top: 45px;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+h2 {
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #444;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #444;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: Montserrat;
+  font-weight: 300;
+  color: #444;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.menuText {
+  font-family: Montserrat;
+  font-weight: 400;
+  color: #444;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.normalText {
+  font-family: 'Open Sans', arial, sans-serif;
+  font-weight: 400;
+  color: #666;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.headingText {
+  font-weight: bold;
+  color: #444;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+.settingsCurrencyBox {
+  width: 4em;
+}
+
+.selectableRow {
+  cursor: pointer;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.vis-hidden {
+  visibility: hidden;
+}
+
+.left-align {
+  float: left;
+}
+
+.right-align {
+  float: right;
+}
+
+.market-table {
+  width: 400px;
+}
+
+.ui-list-view-cell {
+  cursor: pointer;
+}
+
+.ui-list-view-cell :hover {
+  background-color: #ddd;
+}
+
+/* Custom page header */
+.header {
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+

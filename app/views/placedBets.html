@@ -1,0 +1,41 @@
+<div class="row marketing">
+  <h2 class="centered">Placed Bets</h2>
+  <br/>
+  <div>
+    <span ng-show="bets.length == 0">No bets have been placed yet</span>
+    <table class="table table-striped table-condensed table-hover" ng-show="bets.length">
+      <thead>
+        <tr class="normalText headingText">
+          <th>Bet</th>
+          <th>Accepted Odds</th>
+          <th>Stake</th>
+          <th>Projected Payout</th>
+          <th>Transaction Ref</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in bets" class="normalText">
+          <td>
+            {{item.event}} - {{item.name}}
+          </td>
+          <td>
+            {{displayOdds(item)}}
+          </td>
+          <td>
+            {{currencySymbol}}{{item.stake}}
+          </td>
+          <td>
+            {{currencySymbol}}{{item.possiblePayout}}
+          </td>
+          <td>
+            {{item.transaction_id}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br/>
+    <div class="right-align">
+      <h4>Best payout {{currencySymbol}}{{bestPayout}}</h4>
+    </div>
+  </div>
+</div>
