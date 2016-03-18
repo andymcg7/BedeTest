@@ -1,7 +1,7 @@
 # bedefrontendtest
 
 This is my implementation of the Bede Frontend Developer test, 2016.
-To run, extract all of the files and open dist/index.html in a browser such as Firefox that supports opening of local files.
+To run, extract all of the files and open dist/index.html in a browser such as Firefox that supports opening of local files. Or to run a local web server see the instructions under build and development.
 
 I chose to use Angular for this project, as I felt from my previous knowledge (although a little rusty) of the framework it was 
 well suited to the task. Using Angular should also help with testing of the code.
@@ -21,7 +21,10 @@ Additions & modifications I would like to make include greater use of CSS proces
 
 ## Build & development
 
-
+Install npm on your pc.
+Download and extract all of the files. Open a command prompt at the directory containing the app & run
+`bower install`
+`npm install`
 
 Run `grunt` for building and `grunt serve` for preview.
 
