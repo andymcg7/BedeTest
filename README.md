@@ -30,5 +30,4 @@ Run `grunt` for building and `grunt serve` for preview.
 
 ## Testing
 
-NOTE Unit tests are not currently working due to an issue with GET requests being made to access the views.
 Running `grunt test` will run the unit tests with karma.
